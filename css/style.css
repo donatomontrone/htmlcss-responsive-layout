@@ -31,6 +31,7 @@
 
 .container {
     width: 100%;
+    flex-direction: column;
 }
 
 header {
@@ -56,13 +57,7 @@ section.header-nav{
 }
 
 section.cards,
-section.plannings,
-section.benefits,
 section.testimonials,
-section.about-us {
-    flex-direction: column;
-}
-section.cards,
 section.about-us{
     margin: 1.5rem;
 }
@@ -91,7 +86,6 @@ div.benefit-card {
 
 section.testimonials{
     height: 200px;
-    margin: 1.5rem;
 }
 
 div.testimonial,
@@ -106,8 +100,8 @@ Tablet
 ***************************************************/
 
 @media screen and (min-width: 768px) {
-    section.cards,
-    section.benefits {
+    section.cards .container,
+    section.benefits .container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -121,8 +115,7 @@ Tablet
     div.benefit-card {
         width: calc(50% - 1rem);
     }
-
-    section.about-us{
+    section.about-us .container{
         flex-direction: row;
     }
     div.about-title {
@@ -132,7 +125,43 @@ Tablet
         text-align: center;
         width: 40%;
     }
+}
 
+/************************************************ 
+Desktop 
+***************************************************/
+
+@media screen and (min-width: 992px) {
+    .container{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    section.header-nav{
+        padding: 1rem;
+    }
+
+    section.cards,
+    section.testimonials,
+    section.about-us{
+        margin: 1.5rem 0;
+    }
+
+    section.plannings .container{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div.benefit-card {
+        width: calc((100% / 3) - 1rem) ;
+    }
+
+    section.started div.container,
+    footer div.container {
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+    }
 }
 
 
