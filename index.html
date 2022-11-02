@@ -1,120 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Responsive Layout</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-        <div class="container">
-            <section class="header-nav flex-between flex">
-                <div class="logo">logo</div>
-                <nav class="navbar">
-                    <i class="fa-solid fa-bars"></i>
-                </nav>
-            </section>
-        </div>
-    </header>
-    <main>
-            <section class="cards">
-                <div class="container flex">
-                    <div class="card principal">
-                        Lorem, ipsum dolor.
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Responsive Layout</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <section class="header-nav flex-between flex">
+                    <div class="logo">
+                        <img src="./css/img/logo.png" alt="Main Logo">
                     </div>
-                    <div class="card">
-                        Lorem, ipsum dolor.
+                    <nav class="navbar">
+                        <ul>
+                            <li>
+                                <a href="#">Planning</a>
+                            </li>
+                            <li>
+                                <a href="#">Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#">Features</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="button">Get Started</a>
+                            </li>
+                        </ul>
+                        <i class="fa-solid fa-bars fa-2x"></i>
+                    </nav>
+                </section>
+            </div>
+        </header>
+        <main>
+                <section class="cards">
+                    <div class="container flex">
+                        <div class="card principal  ">
+                            <div class="principal-button">
+                                <h4>Get a demo application</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ullam pariatur architecto debitis eos adipisci atque harum cupiditate aliquid.</p>
+                                <button class="blue-button"><i class="fa-brands fa-apple"></i> App Store</button>
+                            </div>
+                            <img src="./css/img/phone.png" alt="iPhone best deals">
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-file-code"></i>
+                            <h4>Clean Code</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nostrum sapiente harum amet possimus in a, atque libero dolore.</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil voluptatem eligendi quos ullam perspiciatis laboriosam obcaecati nulla qui aut!</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h4>Developement</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis exercitationem aspernatur accusantium cumque dolorem perspiciatis et ea voluptatum veritatis!</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <h4>Branding</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dignissimos quibusdam eaque error deleniti facere voluptatem, voluptatibus quam consequuntur.</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        Lorem, ipsum dolor.
+                </section>
+                <section class="plannings violet-bg">
+                    <div class="container flex">
+                        <div class="left-planning planning">
+                            Lorem, ipsum dolor.
+                        </div>
+                        <div class="right-planning planning">
+                            Lorem, ipsum dolor.
+                        </div>
                     </div>
-                    <div class="card">
-                        Lorem, ipsum dolor.
+                </section>
+                <section class="testimonials">
+                    <div class="container flex">
+                        <div class="testimonial violet-bg">
+                            Lorem, ipsum dolor.
+                        </div>
+                        <div class="testimonial violet-bg">
+                            Lorem, ipsum dolor.
+                        </div>
+                        <div class="testimonial violet-bg">
+                            Lorem, ipsum dolor.
+                        </div>
                     </div>
-                    <div class="card">
-                        Lorem, ipsum dolor.
+                </section>
+                <section class="benefits violet-bg">
+                    <div class="container flex">
+                        <div class="benefit-card">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+                        <div class="benefit-card">
+                            Lorem ipsum dolor sit amet.
+                        </div>                
+                        <div class="benefit-card">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+                        <div class="benefit-card">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+                        <div class="benefit-card">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+                        <div class="benefit-card">
+                            Lorem ipsum dolor sit amet.
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="plannings violet-bg">
-                <div class="container flex">
-                    <div class="left-planning planning">
-                        Lorem, ipsum dolor.
+                </section>
+                <section class="about-us">
+                    <div class="container flex">
+                        <div class="about-title">
+                            <h2>title</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa beatae officiis ipsum omnis libero mollitia modi error, alias aperiam eaque saepe nulla quod cum quis deserunt recusandae nemo fugiat!</p>
+                        </div>
+                        <div class="about-img">
+                            <p>img</p>
+                            <h5>title</h5>
+                            <button>findme</button>
+                        </div>
                     </div>
-                    <div class="right-planning planning">
-                        Lorem, ipsum dolor.
+                </section>
+                <section class="started violet-bg">
+                    <div class="container">
+                        <p>get start</p>
+                        <h5>Simple</h5>
+                        <h1>free!</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis provident nostrum distinctio suscipit adipisci ex accusamus placeat, fugit et aperiam est, laudantium similique ipsam necessitatibus eaque voluptates deserunt, dolor laboriosam.</p>
+                        <button>getstart</button>
+                        <p class="copyright">copyright</p>
                     </div>
-                </div>
-            </section>
-            <section class="testimonials">
-                <div class="container flex">
-                    <div class="testimonial violet-bg">
-                        Lorem, ipsum dolor.
-                    </div>
-                    <div class="testimonial violet-bg">
-                        Lorem, ipsum dolor.
-                    </div>
-                    <div class="testimonial violet-bg">
-                        Lorem, ipsum dolor.
-                    </div>
-                </div>
-            </section>
-            <section class="benefits violet-bg">
-                <div class="container flex">
-                    <div class="benefit-card">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <div class="benefit-card">
-                        Lorem ipsum dolor sit amet.
-                    </div>                
-                    <div class="benefit-card">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <div class="benefit-card">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <div class="benefit-card">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <div class="benefit-card">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                </div>
-            </section>
-            <section class="about-us">
-                <div class="container flex">
-                    <div class="about-title">
-                        <h2>title</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa beatae officiis ipsum omnis libero mollitia modi error, alias aperiam eaque saepe nulla quod cum quis deserunt recusandae nemo fugiat!</p>
-                    </div>
-                    <div class="about-img">
-                        <p>img</p>
-                        <h5>title</h5>
-                        <button>findme</button>
-                    </div>
-                </div>
-            </section>
-            <section class="started violet-bg">
-                <div class="container flex">
-                    <p>get start</p>
-                    <h5>Simple</h5>
-                    <h1>free!</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis provident nostrum distinctio suscipit adipisci ex accusamus placeat, fugit et aperiam est, laudantium similique ipsam necessitatibus eaque voluptates deserunt, dolor laboriosam.</p>
-                    <button>getstart</button>
-                    <p class="copyright">copyright</p>
-                </div>
-            </section>
-    </main>
-    <footer>
-        <div class="container flex">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi, rem id eligendi, quia nam sunt officiis mollitia, impedit ad labore eius consequatur vitae suscipit amet ab illo quas itaque?</p>
-            <a href="#">Lorem</a><span>Lorem, ipsum dolor.<a href="#">boolean</a>
-            </span>
-        </div>
-    </footer>
-</body>
+                </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi, rem id eligendi, quia nam sunt officiis mollitia, impedit ad labore eius consequatur vitae suscipit amet ab illo quas itaque?</p>
+                <a href="#">Lorem</a><span>Lorem, ipsum dolor.<a href="#">boolean</a>
+                </span>
+            </div>
+        </footer>
+    </body>
 </html>

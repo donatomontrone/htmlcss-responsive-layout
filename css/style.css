@@ -5,18 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'PT Sans', sans-serif;
+}
 
 .flex {
     display: flex;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
 }
 
 .flex-centered {
@@ -53,19 +47,66 @@ footer {
 }
 
 section.header-nav{
-    padding: 1rem;
+    padding: .5rem 1rem;
+}
+
+nav.navbar ul {
+    display: none;
 }
 
 section.cards,
 section.testimonials,
 section.about-us{
-    margin: 1.5rem;
+    margin: 2rem 1.5rem 3rem;
 }
 
 section.cards div.card {
-    background-color: #B5DDFB;
+    background-color: #B5DDFF;
     margin-bottom: 1.5rem;
-    height: 100px;
+    border-radius: .9rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+section.cards div.principal {
+    padding-bottom: 0;
+    text-align: start;
+}
+
+div.card h4 {
+    color: #0184FD;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+div.card p {
+    color:#5A6E7F;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+button.blue-button{
+    border: none;
+    border-radius: .9rem;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 2.5rem;
+    margin: 1.3rem 0;
+    letter-spacing: .1rem;
+    background-color: #0184FD;
+}
+
+div.card img {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+div.card .fa-solid{
+    font-size: 4rem;
+    padding: 1rem;
+    color: #0184FD;
+
 }
 
 section.plannings,
@@ -106,21 +147,31 @@ Tablet
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     div.card {
         width: calc((100% / 3) - 1rem) ;
     }
+
+    div.card img {
+        margin: 0;
+    }
+
     div.principal {
         width: calc(((100% / 3) * 2) - .5rem);
     }
+
     div.benefit-card {
         width: calc(50% - 1rem);
     }
+
     section.about-us .container{
         flex-direction: row;
     }
+
     div.about-title {
         width: 60%;
     }
+
     div.about-img {
         text-align: center;
         width: 40%;
@@ -138,13 +189,46 @@ Desktop
     }
 
     section.header-nav{
-        padding: 1rem;
+        padding: .5rem 0;
     }
 
+    nav.navbar i {
+        display: none;
+    }
+
+    nav.navbar ul {
+        display: inline-block;
+        list-style: none;
+    }
+
+    nav.navbar ul li{
+        display: inline-block;
+    }
+
+    nav.navbar ul li a {
+        text-decoration: none;
+        color: white;
+        margin-left: .8rem;
+    }
+
+    nav.navbar ul li a.button {
+        border-radius: .9rem;
+        background-color: white;
+        color: black;
+        padding: .3rem .6rem;
+    }
     section.cards,
     section.testimonials,
     section.about-us{
         margin: 1.5rem 0;
+    }
+
+    div.principal {
+        display: flex;
+    }
+
+    div.card img {
+        width: 250px;
     }
 
     section.plannings .container{
