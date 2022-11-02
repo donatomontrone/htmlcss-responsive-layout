@@ -39,16 +39,53 @@ header {
     color: white;
 }
 
+footer {
+    background-color: #333333;
+}
+
+.violetc{
+    background-color: #9792E4;
+}
+
 section.header-nav{
     padding: 1rem;
 }
 
-section.cards{
+section.cards,
+section.about-us{
     margin: 1.5rem;
 }
 
 section.cards div.card {
     background-color: #B5DDFB;
-    margin-bottom: 1rem;
-    height: 400px;
+    margin-bottom: 1.5rem;
+    height: 100px;
 }
+
+section.plannings,
+section.benefits {
+    height: 100%;
+    padding: 1.5rem;
+}
+
+div.planning,
+div.benefit-card {
+    height: 20%;
+}
+
+div.right-planning,
+div.benefit-card {
+    background-color: white;
+}
+
+section.testimonials{
+    height: 200px;
+    margin: 1.5rem;
+}
+
+div.testimonial,
+div.benefit-card{
+    height: 50px;
+    margin-bottom: 1.5rem;
+}
+
