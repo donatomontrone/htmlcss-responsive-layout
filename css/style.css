@@ -57,7 +57,7 @@ nav.navbar ul {
 section.cards,
 section.testimonials,
 section.about-us{
-    margin: 2rem 1.5rem 3rem;
+    margin: 2.5rem 1.5rem 3rem;
 }
 
 section.cards div.card {
@@ -112,7 +112,7 @@ div.card .fa-solid{
 section.plannings,
 section.benefits {
     height: 100%;
-    padding: 1.5rem;
+    padding:  2.5rem 1.5rem 3rem;
 }
 
 div.planning,
@@ -125,14 +125,112 @@ div.benefit-card {
     background-color: white;
 }
 
-section.testimonials{
-    height: 200px;
+
+div.left-planning img,
+div.right-planning img{
+    width: 100%;
 }
 
-div.testimonial,
-div.benefit-card{
-    height: 50px;
+div.left-planning {
+    color: white;
+}
+
+div.left-planning h3 {
+    font-size: 1.5rem;
+    padding: 3rem 0 2rem;
+}
+
+div.left-planning p {
     margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+div.right-planning,
+div.testimonial {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+div.right-planning h3 {
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+}
+
+div.right-planning p {
+    font-style: italic;
+    line-height: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+div.right-planning i {
+    border-radius: 100%;
+    padding: 1rem;
+    
+}
+
+section.testimonials {
+    text-align: center;
+}
+
+section.testimonials div.container > p{
+    margin-bottom: 2rem;
+}
+section.testimonials p:first-child,
+div.testimonial p:last-child{
+    text-transform: uppercase;
+}
+
+section.testimonials h3{
+    font-size: 1.5rem;
+    color: #9792E4;
+    padding-bottom: 1.5rem;
+}
+
+div.testimonial {
+    margin-bottom: 1.5rem;
+}
+
+section.testimonials p{
+    line-height: 1.7rem;
+}
+
+div.testimonial div.img-radius {
+    border-radius: 100%;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.testimonial div.reynolds{
+    background-image: url(img/testimonial1.jpg);
+}
+div.testimonial div.almeda{
+    background-image: url(img/testimonial2.jpg);
+}
+div.testimonial div.roberts{
+    background-image: url(img/testimonial3.jpg);
+}
+
+
+div.testimonial p {
+    padding-top: 1rem;
+    color: white;
+}
+
+div.testimonial p:last-child {
+    font-weight: bold;
+
+}
+div.testimonial p i.fa-quote-left {
+    padding-right: .3rem;
+}
+
+div.testimonial p i.fa-quote-right {
+    padding-left: .3rem;
 }
 
 
@@ -232,8 +330,14 @@ Desktop
     }
 
     section.plannings .container{
+        width: 50%;
         flex-direction: row;
         justify-content: center;
+        align-items: baseline;
+    }
+
+    section.plannings div.right-planning {
+        margin-left: 3rem;
     }
 
     div.benefit-card {
