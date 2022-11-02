@@ -6,9 +6,8 @@
     box-sizing: border-box;
 }
 
-.flex-row {
+.flex {
     display: flex;
-    flex-direction: row;
 }
 
 .flex-column {
@@ -43,7 +42,12 @@ footer {
     background-color: #333333;
 }
 
-.violetc{
+section.started,
+footer {
+    text-align: center;
+}
+
+.violet-bg{
     background-color: #9792E4;
 }
 
@@ -51,6 +55,13 @@ section.header-nav{
     padding: 1rem;
 }
 
+section.cards,
+section.plannings,
+section.benefits,
+section.testimonials,
+section.about-us {
+    flex-direction: column;
+}
 section.cards,
 section.about-us{
     margin: 1.5rem;
@@ -88,4 +99,41 @@ div.benefit-card{
     height: 50px;
     margin-bottom: 1.5rem;
 }
+
+
+/************************************************ 
+Tablet 
+***************************************************/
+
+@media screen and (min-width: 768px) {
+    section.cards,
+    section.benefits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    div.card {
+        width: calc((100% / 3) - 1rem) ;
+    }
+    div.principal {
+        width: calc(((100% / 3) * 2) - .5rem);
+    }
+    div.benefit-card {
+        width: calc(50% - 1rem);
+    }
+
+    section.about-us{
+        flex-direction: row;
+    }
+    div.about-title {
+        width: 60%;
+    }
+    div.about-img {
+        text-align: center;
+        width: 40%;
+    }
+
+}
+
+
 
