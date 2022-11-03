@@ -38,7 +38,9 @@ footer {
 }
 
 section.started,
-footer {
+footer,
+section.testimonials,
+section.benefits div.container h3{
     text-align: center;
 }
 
@@ -86,6 +88,10 @@ div.card p {
 }
 
 button.blue-button{
+    background-color: #0184FD;
+}
+
+button.button {
     border: none;
     border-radius: .9rem;
     color: white;
@@ -93,7 +99,6 @@ button.blue-button{
     padding: .5rem 2.5rem;
     margin: 1.3rem 0;
     letter-spacing: .1rem;
-    background-color: #0184FD;
 }
 
 div.card img {
@@ -111,7 +116,6 @@ div.card .fa-solid{
 
 section.plannings,
 section.benefits {
-    height: 100%;
     padding:  2.5rem 1.5rem 3rem;
 }
 
@@ -125,13 +129,13 @@ div.benefit-card {
     background-color: white;
 }
 
-
 div.left-planning img,
 div.right-planning img{
     width: 100%;
 }
 
-div.left-planning {
+div.left-planning,
+section.benefits h3 {
     color: white;
 }
 
@@ -169,56 +173,57 @@ div.right-planning i {
     
 }
 
-section.testimonials {
-    text-align: center;
-}
-
 section.testimonials div.container > p{
     margin-bottom: 2rem;
 }
-section.testimonials p:first-child,
+
+section.testimonials > p:first-child,
 div.testimonial p:last-child{
     text-transform: uppercase;
 }
 
-section.testimonials h3{
+section.testimonials h3,
+section.benefits h3{
     font-size: 1.5rem;
-    color: #9792E4;
     padding-bottom: 1.5rem;
+}
+
+section.testimonials h3 {
+    color: #9792E4;
 }
 
 div.testimonial {
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 section.testimonials p{
     line-height: 1.7rem;
 }
 
-div.testimonial div.img-radius {
-    border-radius: 100%;
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-div.testimonial div.reynolds{
-    background-image: url(img/testimonial1.jpg);
-}
-div.testimonial div.almeda{
-    background-image: url(img/testimonial2.jpg);
-}
-div.testimonial div.roberts{
-    background-image: url(img/testimonial3.jpg);
-}
-
-
 div.testimonial p {
     padding-top: 1rem;
     color: white;
+}
+
+div.testimonial figure {
+    margin: 0 auto;
+}
+
+div.testimonial figure,
+div.about-img figure {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+div.testimonial figure img,
+div.about-img figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 div.testimonial p:last-child {
@@ -232,7 +237,47 @@ div.testimonial p i.fa-quote-left {
 div.testimonial p i.fa-quote-right {
     padding-left: .3rem;
 }
+section.benefits .flex {
+    flex-direction: column;
+}
 
+div.benefit-card {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: .9rem;
+}
+
+div.benefit-card h2,
+div.about-title h2 {
+    font-size: 2.5rem;
+}
+
+div.benefit-card h2,
+div.benefit-card h5,
+div.about-title h2 {
+    color: #9792E4;
+}
+
+div.benefit-card p {
+    font-size: .7rem;
+    line-height: 1.2rem;
+    color: grey;
+    padding-top: 1rem;
+}
+
+div.about-title p {
+    padding: 2rem 0;
+}
+
+figure {
+    position: relative;
+}
+
+figure i {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
 
 /************************************************ 
 Tablet 
@@ -240,7 +285,7 @@ Tablet
 
 @media screen and (min-width: 768px) {
     section.cards .container,
-    section.benefits .container {
+    section.benefits .flex {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -256,6 +301,17 @@ Tablet
 
     div.principal {
         width: calc(((100% / 3) * 2) - .5rem);
+    }
+
+    div.testimonial {
+        flex-direction: row;
+    }
+
+
+    div.testimonial-description {
+        text-align: left;
+        width: 80%;
+        padding-left: 2rem;
     }
 
     div.benefit-card {
