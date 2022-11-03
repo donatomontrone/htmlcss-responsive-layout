@@ -5,17 +5,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    /* Color White */
+    --white-color: white;
+    /* Color Violet */
+    --violet-color: #9792E4;
+    /* Color Blue */
+    --blue-color: #0184FD;
+    /* Secondary bg color */
+    --secondary-bg-color:#B5DDFF;
+}
 body{
     font-family: 'PT Sans', sans-serif;
 }
 
 .flex {
     display: flex;
-}
-
-.flex-centered {
-    justify-content: center;
-    align-items: center;
 }
 
 .flex-between{
@@ -29,7 +35,7 @@ body{
 }
 
 header {
-    background-color: #0184FD;
+    background-color: var(--blue-color);
 }
 
 footer {
@@ -48,7 +54,7 @@ div.testimonial{
 }
 
 .violet-bg{
-    background-color: #9792E4;
+    background-color: var(--violet-color);
 }
 
 section.header-nav{
@@ -66,7 +72,7 @@ section.about-us{
 }
 
 section.cards div.card {
-    background-color: #B5DDFF;
+    background-color: var(--secondary-bg-color);
     margin-bottom: 1.5rem;
     border-radius: .9rem;
     padding: 2rem;
@@ -84,17 +90,16 @@ div.card h4 {
 
 div.card h4,
 div.card .fa-solid {
-    color: #0184FD;
+    color: var(--blue-color);
 }
 
 div.card p {
     color:#5A6E7F;
     font-weight: bold;
-    line-height: 1.5rem;
 }
 
 button.blue-button{
-    background-color: #0184FD;
+    background-color: var(--blue-color);
 }
 
 button.button {
@@ -122,15 +127,10 @@ section.benefits {
     padding:  2.5rem 1.5rem 3rem;
 }
 
-div.planning,
-div.benefit-card {
-    height: 20%;
-}
-
 div.right-planning,
 div.benefit-card,
 button {
-    background-color: white;
+    background-color: var(--white-color);
 }
 
 div.left-planning img,
@@ -146,7 +146,7 @@ section.benefits h3,
 div.testimonial p,
 section.started,
 section.started a {
-    color: white;
+    color: var(--white-color);
 }
 
 div.left-planning h3 {
@@ -156,7 +156,6 @@ div.left-planning h3 {
 
 div.left-planning p {
     margin-bottom: 1.5rem;
-    line-height: 1.5rem;
 }
 
 div.right-planning,
@@ -172,7 +171,6 @@ div.right-planning h3 {
 
 div.right-planning p {
     font-style: italic;
-    line-height: 1.7rem;
     margin-bottom: 1.5rem;
 }
 
@@ -200,7 +198,12 @@ div.testimonial {
     margin-bottom: 1.5rem;
 }
 
-section.testimonials p{
+div.card p,
+div.left-planning p,
+div.right-planning p,
+section.testimonials p,
+div.about-title p,
+section.started p{
     line-height: 1.7rem;
 }
 
@@ -213,7 +216,7 @@ div.testimonial figure {
 }
 
 div.testimonial figure,
-div.about-img figure {
+div.quote-icon figure {
     border-radius: 50%;
     overflow: hidden;
     width: 200px;
@@ -221,7 +224,7 @@ div.about-img figure {
 }
 
 div.testimonial figure img,
-div.about-img figure img{
+div.quote-icon figure img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -258,11 +261,11 @@ section.testimonials h3,
 div.benefit-card h2,
 div.benefit-card h5,
 div.about-title h2,
-div.about-img > i,
+div.quote-icon > i,
 div.about-img h4,
 section.started button,
 footer a{
-    color: #9792E4;
+    color: var(--violet-color);
 }
 
 div.benefit-card p {
@@ -274,17 +277,16 @@ div.benefit-card p {
 
 div.about-title p {
     padding: 1rem 0;
-    line-height: 1.8rem;
 }
 
-div.about-img {
+div.quote-icon {
     position: relative;
 }
 
-div.about-img > i {
+div.quote-icon > i {
     position: absolute;
     top: 0;
-    right: 140px;
+    left: 150px;
     font-size: 4rem;
 }
 
@@ -298,9 +300,9 @@ footer .container {
     width: 85%;
     margin:0 auto;
 }
+
 section.started p {
-    margin: 1.5rem 0;
-    line-height: 1.7rem;
+    padding: 1.5rem 0;
     font-size: .9rem;
 }
 
@@ -327,6 +329,7 @@ footer p {
     padding: 2rem 0;
 }
 
+
 /************************************************ 
 Tablet 
 ***************************************************/
@@ -349,12 +352,23 @@ Tablet
 
     div.principal {
         width: calc(((100% / 3) * 2) - .5rem);
+        position: relative;
+    }
+
+    div.principal-button {
+        width: 40%;
+    }
+    
+    div.card img {
+        position: absolute;
+        width: 200px;
+        bottom: 0;
+        right: 5%;
     }
 
     div.testimonial {
         flex-direction: row;
     }
-
 
     div.testimonial-description {
         text-align: left;
@@ -383,8 +397,8 @@ Tablet
         margin: 0 auto;
     }
 
-    div.about-img > i {
-        right: 40px;
+    div.quote-icon > i {
+        left: 65%;
     }
 
 }
@@ -418,13 +432,13 @@ Desktop
 
     nav.navbar ul li a {
         text-decoration: none;
-        color: white;
+        color: var(--white-color);
         margin-left: .8rem;
     }
 
     nav.navbar ul li a.button {
         border-radius: .9rem;
-        background-color: white;
+        background-color: var(--white-color);
         color: black;
         padding: .3rem .6rem;
     }
@@ -436,10 +450,18 @@ Desktop
 
     div.principal {
         display: flex;
+        position: relative;
+    }
+
+    div.principal-button {
+        width: 40%;
     }
 
     div.card img {
+        position: absolute;
         width: 250px;
+        bottom: 0;
+        right: 3%;
     }
 
     section.plannings .container{
@@ -472,8 +494,8 @@ Desktop
         width: 55%;
     }
 
-    div.about-img > i {
-        right: 55px;
+    div.quote-icon > i {
+        left: 70%;
     }
 }
 
