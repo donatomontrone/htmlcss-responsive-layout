@@ -30,17 +30,20 @@ body{
 
 header {
     background-color: #0184FD;
-    color: white;
 }
 
 footer {
     background-color: #333333;
+    font-size: .9rem;
 }
 
 section.started,
 footer,
 section.testimonials,
-section.benefits div.container h3{
+section.benefits div.container h3,
+section.cards div.card,
+div.right-planning,
+div.testimonial{
     text-align: center;
 }
 
@@ -67,7 +70,6 @@ section.cards div.card {
     margin-bottom: 1.5rem;
     border-radius: .9rem;
     padding: 2rem;
-    text-align: center;
 }
 
 section.cards div.principal {
@@ -76,9 +78,13 @@ section.cards div.principal {
 }
 
 div.card h4 {
-    color: #0184FD;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+div.card h4,
+div.card .fa-solid {
+    color: #0184FD;
 }
 
 div.card p {
@@ -94,7 +100,6 @@ button.blue-button{
 button.button {
     border: none;
     border-radius: .9rem;
-    color: white;
     font-weight: bold;
     padding: .5rem 2.5rem;
     margin: 1.3rem 0;
@@ -110,8 +115,6 @@ div.card img {
 div.card .fa-solid{
     font-size: 4rem;
     padding: 1rem;
-    color: #0184FD;
-
 }
 
 section.plannings,
@@ -125,7 +128,8 @@ div.benefit-card {
 }
 
 div.right-planning,
-div.benefit-card {
+div.benefit-card,
+button {
     background-color: white;
 }
 
@@ -134,8 +138,14 @@ div.right-planning img{
     width: 100%;
 }
 
+header,
+footer,
 div.left-planning,
-section.benefits h3 {
+button.button,
+section.benefits h3,
+div.testimonial p,
+section.started,
+section.started a {
     color: white;
 }
 
@@ -153,7 +163,6 @@ div.right-planning,
 div.testimonial {
     padding: 1.5rem;
     border-radius: 2rem;
-    text-align: center;
 }
 
 div.right-planning h3 {
@@ -170,7 +179,6 @@ div.right-planning p {
 div.right-planning i {
     border-radius: 100%;
     padding: 1rem;
-    
 }
 
 section.testimonials div.container > p{
@@ -188,14 +196,8 @@ section.benefits h3{
     padding-bottom: 1.5rem;
 }
 
-section.testimonials h3 {
-    color: #9792E4;
-}
-
 div.testimonial {
     margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
 }
 
 section.testimonials p{
@@ -204,7 +206,6 @@ section.testimonials p{
 
 div.testimonial p {
     padding-top: 1rem;
-    color: white;
 }
 
 div.testimonial figure {
@@ -237,7 +238,8 @@ div.testimonial p i.fa-quote-left {
 div.testimonial p i.fa-quote-right {
     padding-left: .3rem;
 }
-section.benefits .flex {
+section.benefits .flex,
+div.testimonial {
     flex-direction: column;
 }
 
@@ -252,9 +254,14 @@ div.about-title h2 {
     font-size: 2.5rem;
 }
 
+section.testimonials h3,
 div.benefit-card h2,
 div.benefit-card h5,
-div.about-title h2 {
+div.about-title h2,
+div.about-img > i,
+div.about-img h4,
+section.started button,
+footer a{
     color: #9792E4;
 }
 
@@ -266,17 +273,58 @@ div.benefit-card p {
 }
 
 div.about-title p {
-    padding: 2rem 0;
+    padding: 1rem 0;
+    line-height: 1.8rem;
 }
 
-figure {
+div.about-img {
     position: relative;
 }
 
-figure i {
+div.about-img > i {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 0;
+    right: 140px;
+    font-size: 4rem;
+}
+
+div.about-img h4 {
+    font-size: 1.7rem;
+    margin: 1.5rem 0;
+}
+
+section.started .container,
+footer .container {
+    width: 85%;
+    margin:0 auto;
+}
+section.started p {
+    margin: 1.5rem 0;
+    line-height: 1.7rem;
+    font-size: .9rem;
+}
+
+section.started h4{
+    font-size: 1.7rem;
+}
+
+section.started h1{
+    font-size: 4rem;
+    margin-top: 1rem;
+    color: #FDC15F;
+}
+
+section.started button {
+    padding: 1.5rem 5rem;
+    border-radius: 30px;
+}
+
+footer span {
+    padding: 0 .4rem;
+}
+
+footer p {
+    padding: 2rem 0;
 }
 
 /************************************************ 
@@ -324,12 +372,21 @@ Tablet
 
     div.about-title {
         width: 60%;
+        margin-right: 3rem;
     }
 
     div.about-img {
-        text-align: center;
         width: 40%;
     }
+
+    div.about-img figure {
+        margin: 0 auto;
+    }
+
+    div.about-img > i {
+        right: 40px;
+    }
+
 }
 
 /************************************************ 
@@ -405,6 +462,18 @@ Desktop
         justify-content: center;
         align-items: center;
         width: 35%;
+    }
+
+    section.about-us{
+        margin: 5rem 0;
+    }
+
+    section.about-us .container {
+        width: 55%;
+    }
+
+    div.about-img > i {
+        right: 55px;
     }
 }
 
