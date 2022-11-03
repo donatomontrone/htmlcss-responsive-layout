@@ -11,8 +11,12 @@
     --white-color: white;
     /* Color Violet */
     --violet-color: #9792E4;
+    /* Color Violet Hover */
+    --hover-violet: #7c77c3;
     /* Color Blue */
     --blue-color: #0184FD;
+    /* Color Blue Hover */
+    --hover-blue: #0159fd;
     /* Secondary bg color */
     --secondary-bg-color:#B5DDFF;
 }
@@ -36,6 +40,9 @@ body{
 
 header {
     background-color: var(--blue-color);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 footer {
@@ -58,17 +65,63 @@ div.testimonial{
 }
 
 section.header-nav{
-    padding: .5rem 1rem;
+    padding: 0 1rem;
 }
 
 nav.navbar ul {
     display: none;
 }
 
-section.cards,
+.menu-button {
+    background-color: var(--blue-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+.navbar-menu {
+    position: relative;
+    display: inline-block;
+}
+
+
+.navbar-item {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.navbar-item a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.navbar-menu:hover .navbar-item {
+    display: block;
+}
+
+.navbar-menu:hover .menu-button {
+    background-color: #0159fd;
+}
+
 section.testimonials,
 section.about-us{
     margin: 2.5rem 1.5rem 3rem;
+}
+
+section.cards{
+    margin: 0 1.5rem 3rem;
+    padding-top: 7rem;
 }
 
 section.cards div.card {
@@ -100,6 +153,10 @@ div.card p {
 
 button.blue-button{
     background-color: var(--blue-color);
+}
+
+button.blue-button:hover{
+    background-color: var(--hover-blue);
 }
 
 button.button {
@@ -257,6 +314,11 @@ div.about-title h2 {
     font-size: 2.5rem;
 }
 
+div.benefit-card button:hover,
+div.about-img button:hover{
+    background-color: var(--hover-violet);
+}
+
 section.testimonials h3,
 div.benefit-card h2,
 div.benefit-card h5,
@@ -319,6 +381,10 @@ section.started h1{
 section.started button {
     padding: 1.5rem 5rem;
     border-radius: 30px;
+}
+
+section.started button:hover {
+    background-color: #5A6E7F;
 }
 
 footer span {
@@ -442,7 +508,7 @@ Desktop
         color: black;
         padding: .3rem .6rem;
     }
-    section.cards,
+
     section.testimonials,
     section.about-us{
         margin: 1.5rem 0;
